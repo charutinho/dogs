@@ -6,9 +6,13 @@ const types = {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     message: "Preencha um e-mail válido.",
   },
+  number: {
+    regex: /^\d+$/,
+    message: "Utilize apenas números.",
+  },
 };
 
-export const useForm = (type) => {
+const useForm = (type) => {
   const [value, setValue] = useState("");
   const [error, setError] = useState("");
 
@@ -40,3 +44,5 @@ export const useForm = (type) => {
     onBlur: () => validate(value),
   };
 };
+
+export default useForm;
