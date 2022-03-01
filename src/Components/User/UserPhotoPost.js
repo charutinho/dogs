@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import useForm from "../../Hooks/useForm";
 import useFetch from "../../Hooks/useFetch";
@@ -7,10 +8,9 @@ import Input from "../Forms/Input";
 import Button from "../Forms/Button";
 import Error from "../Helper/Error";
 
-import styles from "./UserPhotoPost.module.css";
 import { PHOTO_POST } from "../../api";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
+
+import styles from "./UserPhotoPost.module.css";
 
 const UserPhotoPost = () => {
   const nome = useForm();

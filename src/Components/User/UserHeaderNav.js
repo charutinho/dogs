@@ -1,6 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { UserContext } from "../../UserContext";
+
+import useMedia from "../../Hooks/useMedia";
 
 import { ReactComponent as MinhasFotos } from "../../assets/feed.svg";
 import { ReactComponent as Estatisticas } from "../../assets/estatisticas.svg";
@@ -8,8 +10,6 @@ import { ReactComponent as AdicionarFoto } from "../../assets/adicionar.svg";
 import { ReactComponent as Sair } from "../../assets/sair.svg";
 
 import styles from "./UserHeaderNav.module.css";
-import useMedia from "../../Hooks/useMedia";
-import { useEffect } from "react/cjs/react.development";
 
 const UserHeaderNav = () => {
   const [mobileMenu, setMobileMenu] = useState(false);

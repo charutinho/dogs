@@ -1,9 +1,13 @@
 import React from "react";
-import FeedPhotosItem from "./FeedPhotosItem";
+
 import useFetch from "../../Hooks/useFetch";
-import { PHOTOS_GET } from "../../api";
+
 import Error from "../Helper/Error";
 import Loading from "../Helper/Loading";
+import FeedPhotosItem from "./FeedPhotosItem";
+
+import { PHOTOS_GET } from "../../api";
+
 import styles from "./FeedPhotos.module.css";
 
 const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
